@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/securitystarter";
+const URL = "https://andreas-cph.com/CA3-Gruppe3"; //Change this to your own URL
  
 function handleHttpErrors(res) {
  if (!res.ok) {
