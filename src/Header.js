@@ -8,8 +8,7 @@ export function Header({isLoggedIn, loginMsg}) {
       <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
       {isLoggedIn &&(
       <>    
-      <li><NavLink activeClassName="active" to="/jokes">Jokes</NavLink></li>
-      <li><NavLink activeClassName="active" to="/scrape">Scrape</NavLink></li>
+      <li><NavLink activeClassName="active" to="/external">External</NavLink></li>
       </>
       )}
       

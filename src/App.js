@@ -4,8 +4,7 @@ import {
   Switch,
   Route} from "react-router-dom";
 import { Header } from "./Header";
-import { Jokes } from "./Jokes";
-import { Scrape } from "./Scrape";
+import { External } from "./External";
 import { LoginAndOut } from "./LoginAndOut";
 
 export default App;
@@ -28,11 +27,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/jokes">
-            <Jokes />
-          </Route>
-          <Route path="/scrape">
-            <Scrape />
+          <Route path="/external">
+            <External />
           </Route>
           <Route path="/login-out">
             <LoginAndOut 
