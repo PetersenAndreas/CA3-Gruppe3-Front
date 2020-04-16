@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import settingUrl from "./settings";
 
 export function External() {
   const [norris, setNorris] = useState(<br/>);
   const [dad, setDad] = useState(<br/>);
   const [country, setCountry] = useState(<br/>);
   const [time, setTime] = useState(<br/>);
+  
+  const URL = settingUrl.externalApi();
   
   function getJokes() {
     let options = {
@@ -14,7 +17,7 @@ export function External() {
         'Accept': 'application/json'
       }
     };
-    fetch("https://andreas-cph.com/CA3-Gruppe3/api/info/external", options)
+    fetch(URL, options)
       .then(res => res.json())
       .then(data => {
         console.log(data);

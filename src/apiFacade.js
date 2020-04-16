@@ -1,4 +1,6 @@
-const URL = "https://andreas-cph.com/CA3-Gruppe3"; //Change this to your own URL
+import settingUrl from "./settings";
+
+const URL = settingUrl.backendURL(); //Change this to your own URL
  
 function handleHttpErrors(res) {
  if (!res.ok) {
