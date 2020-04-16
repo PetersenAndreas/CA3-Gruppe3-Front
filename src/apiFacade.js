@@ -10,9 +10,9 @@ function handleHttpErrors(res) {
 function apiFacade() {
  /* Insert utility-methods from a latter step (d) here (REMEMBER to uncomment in the returned object when you do)*/
 
- const setToken = (token) => {
-    localStorage.setItem('jwtToken', token)
-  }
+const setToken = (token) => {
+  localStorage.setItem('jwtToken', token)
+}
 const getToken = () => {
   return localStorage.getItem('jwtToken')
 }
@@ -22,18 +22,36 @@ const loggedIn = () => {
 }
 const logout = () => {
   localStorage.removeItem("jwtToken");
+  localStorage.removeItem("loginRoles");
+}
+const setRoles = (roles) => {
+  localStorage.setItem('loginRoles', roles)
+}
+const getRoles = () => {
+  return localStorage.getItem('loginRoles')
+}
+const isAdmin = () => {
+  const isAdmin = String(getRoles()).includes("admin");
+  return isAdmin;
+}
+const isUser = () => {
+  const isAdmin = String(getRoles()).includes("user");
+  return isAdmin;
 }
 
- 
 const login = (user, password) => {
     const options = makeOptions("POST", true,{username: user, password: password });
     return fetch(URL + "/api/login", options)
       .then(handleHttpErrors)
-      .then(res => {setToken(res.token) })
+      .then(res => {setToken(res.token); console.log(res); setRoles(res.roles) })
   }
-const fetchData = () => {
+const fetchUserData = () => {
     const options = makeOptions("GET",true); //True add's the token
     return fetch(URL + "/api/info/user", options).then(handleHttpErrors);  
+}
+const fetchAdminData = () => {
+  const options = makeOptions("GET",true); //True add's the token
+  return fetch(URL + "/api/info/admin", options).then(handleHttpErrors);  
 }
 const makeOptions= (method,addToken,body) =>{
    var opts = {
@@ -58,7 +76,10 @@ const makeOptions= (method,addToken,body) =>{
      loggedIn,
      login,
      logout,
-     fetchData
+     fetchUserData,
+     fetchAdminData,
+     isAdmin,
+     isUser
  }
 }
 const facade = apiFacade();

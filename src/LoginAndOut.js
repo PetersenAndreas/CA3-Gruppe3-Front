@@ -35,7 +35,13 @@ function LogIn({ login, loginMsg }) {
 }
 function LoggedIn({ loginMsg, logout }) {
   const [dataFromServer, setDataFromServer] = useState("Loading...");
-  useEffect(() => { facade.fetchData().then(data => setDataFromServer(data.msg)); }, []);
+  useEffect(() => { 
+    if(facade.isAdmin()){
+      facade.fetchAdminData().then(data => setDataFromServer(data.msg)); 
+    } else if (facade.isUser()){
+      facade.fetchUserData().then(data => setDataFromServer(data.msg)); 
+    }  
+  }, []);
   return (<div>
     <h2>This is where you logout</h2>
     <h3>{dataFromServer}</h3>
