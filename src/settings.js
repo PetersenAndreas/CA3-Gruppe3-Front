@@ -1,19 +1,23 @@
 
-export default function URLS(){
+function URLS(){
 
-    function BackendURL() {
+    function backendURL() {
         const URL = "https://andreas-cph.com/CA3-Gruppe3";
         return URL;
     }
 
-    function ExternalApi() {
+    function externalApi() {
         const URL = "https://andreas-cph.com/CA3-Gruppe3/api/info/external";
         return URL;
     }
 
     return {
-        ExternalApi,
-        BackendURL
+        backendURL,
+        externalApi
     }
 
 }
+
+const settingUrl = URLS();
+
+export default settingUrl;
