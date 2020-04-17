@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Group 3 - CA3 - FrontEnd
+*This project is the startcode written by Group 3 for the CA3-assignment*
 
-## Available Scripts
+### Preconditions
+*In order to use this code, you should have a local developer setup + a "matching" droplet on Digital Ocean as described in the 3. semester guidelines* 
 
-In the project directory, you can run:
+### Initial Setup
+ - Clone the project `git clone git@github.com:PetersenAndreas/CA3-Gruppe3-Front.git`
+ - Delete the .git folder in the project
+ - Make your own Repository for the project (git init, make repository on github, and follow github instructions to push this project up)
+ - Do a `npm install` in the root folder, to get the node modules downloaded (these are ingored in the .gitIgnore file)
+ - Do a `code .` to open Visual Studio
+ - Do a `npm start` to launch the program locally in a browser
 
-### `npm start`
+ ### Customise your project
+ - Change the backEndURL in the settings.js to match your own backEnd.
+ - Change the externalApi in the settings.js to match you desired API
+    - If you need multiple API's to fetch from that are not combined in the backEnd, you can get inspiration on how to make the .js class in the External.js and make a "getter" simaler to the externalApi in settings.js 
+#### Deploy the project to surge
+- Make sure that you have surge install globaly on your machine.(Go to the build, if already done)
+    - Open a terminal and type `install -g surge` 
+- Build your frontend project
+    - `npm run build`
+- Push the build up on surge
+    - `surge --project ./build --domain "A_DOMAIN_NAME".surge.sh`(Remove the `""`)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Original startup code from the teachers
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+As the project is build on the original startcode provided by React the previus readme, with instruction can be found here: 
+ - [Orginal REACT guide](README_NPM_INSTRUCTIONS.md)
