@@ -16,7 +16,7 @@
  - Change the backEndURL in the settings.js to match your own backEnd.
  - Change the externalApi in the settings.js to match you desired API
     - If you need multiple API's to fetch from that are not combined in the backEnd, you can get inspiration on how to make the .js class in the External.js and make a "getter" simaler to the externalApi in settings.js 
-#### Deploy the project to surge
+### Deploy the project to surge
 - Make sure that you have surge install globaly on your machine.(Go to the build, if already done)
     - Open a terminal and type `install -g surge` 
 - Build your frontend project
