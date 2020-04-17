@@ -21,8 +21,8 @@
     - Open a terminal and type `install -g surge` 
 - Build your frontend project
     - `npm run build`
-- Push the build up on surge(Change *A_DOMAIN_NAME* to your own desired domain)
-    - `surge --project ./build --domain *A_DOMAIN_NAME*.surge.sh`
+- Push the build up on surge(Change **A_DOMAIN_NAME** to your own desired domain)
+    - `surge --project ./build --domain A_DOMAIN_NAME.surge.sh`
 - If this was your first time running surge, you'll be prompted to create an account. Add email and password, then hit enter.     
 
 # Original startup code from the teachers
