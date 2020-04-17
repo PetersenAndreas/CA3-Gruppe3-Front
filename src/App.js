@@ -6,6 +6,7 @@ import {
 import { Header } from "./Header";
 import { External } from "./External";
 import { LoginAndOut } from "./LoginAndOut";
+import { Admin } from "./Admin";
 
 export default App;
 
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/external">
             <External />
+          </Route>
+          <Route path="/admin-page">
+            <Admin />
           </Route>
           <Route path="/login-out">
             <LoginAndOut 
