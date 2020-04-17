@@ -56,6 +56,10 @@ function Home() {
     <div>
       <h1>Home</h1>
       <p>Home is were the wifi connects automatically</p>
+      <hr/>
+      <h3>This startcode was made by Gruppe3</h3>
+      <a href="https://github.com/PetersenAndreas/CA3-Gruppe3-Front" style={{color: "blue"}}>To the FrontEnd</a> <br/>
+      <a href="https://github.com/PetersenAndreas/CA3-Gruppe3" style={{color: "blue"}}>To the BackEnd</a> <br/>
     </div>
   );
 }
